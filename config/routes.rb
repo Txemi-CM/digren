@@ -1,4 +1,12 @@
 Digren::Application.routes.draw do
+  root to: 'static_pages#home'
+
+  match '/books', to: 'static_pages#books'
+
+  match '/thebook', to: 'static_pages#thebook'
+
+  match '/blog', to: 'static_pages#blog'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
