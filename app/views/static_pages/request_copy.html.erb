@@ -1,0 +1,46 @@
+<h1>Get your free copy of Digital Renaissance</h1>
+<h2>Get it the traditional way...</h2>
+<div class="row">
+  <div class="span6 offset3">
+    <p>Enter your email address and we will send you a free pdf copy of the book.</p>
+    <p>If you like it, tell your friends and it write a review on Amazon.com</p>
+
+    <% @reader = Reader.new %>
+
+
+    <%= form_for(@reader) do |f| %>
+      <% if @reader.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@reader.errors.count, "error") %> prohibited this reader from being saved:</h2>
+
+          <ul>
+          <% @reader.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= f.label :name %><br />
+        <%= f.text_field :name %>
+      </div>
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.text_field :email %>
+      </div>
+       
+      <div class="actions">
+        <%= f.submit "Send me a free pdf copy", class: "btn btn-large btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<h2>Get it the Twitter way...</h2>
+<div class="row">
+  <div class="span6 offset3">    
+    <p>You can also tweet with a link to this page and if you follow us, we will send you a DM with the link to download the book.</p>
+    <%= render 'layouts/social' %>
+  </div>
+</div>

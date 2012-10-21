@@ -44,8 +44,8 @@ class ReadersController < ApplicationController
 
     respond_to do |format|
       if @reader.save
-        format.html { redirect_to @reader, notice: 'Reader was successfully created.' }
-        format.json { render json: @reader, status: :created, location: @reader }
+        format.html { redirect_to thankyou_path, notice: 'Thank you! We will send you a free pdf copy of Digital Renaissance.' }
+        # format.json { render json: @reader, status: :created, location: @reader }
       else
         format.html { render action: "new" }
         format.json { render json: @reader.errors, status: :unprocessable_entity }
@@ -80,4 +80,6 @@ class ReadersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
 end

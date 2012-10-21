@@ -10,4 +10,10 @@ class StaticPagesController < ApplicationController
 
   def blog
   end
+
+  def request_copy
+  end
+
+  def thankyou
+  end
 end
