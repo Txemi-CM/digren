@@ -1,0 +1,2 @@
+module BookquotesHelper
+end

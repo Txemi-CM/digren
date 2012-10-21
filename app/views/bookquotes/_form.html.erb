@@ -1,0 +1,41 @@
+<%= form_for(@bookquote) do |f| %>
+  <% if @bookquote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bookquote.errors.count, "error") %> prohibited this bookquote from being saved:</h2>
+
+      <ul>
+      <% @bookquote.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :asin %><br />
+    <%= f.text_field :asin %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+  </div>
+  <div class="field">
+    <%= f.label :quote %><br />
+    <%= f.text_area :quote %>
+  </div>
+  <div class="field">
+    <%= f.label :tw_user %><br />
+    <%= f.text_field :tw_user %>
+  </div>
+  <div class="field">
+    <%= f.label :published %><br />
+    <%= f.text_field :published %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

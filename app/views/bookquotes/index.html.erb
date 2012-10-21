@@ -1,0 +1,33 @@
+<h1>Listing bookquotes</h1>
+
+<table>
+  <tr>
+    <th>Asin</th>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Quote</th>
+    <th>Tw user</th>
+    <th>Published</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bookquotes.each do |bookquote| %>
+  <tr>
+    <td><%= bookquote.asin %></td>
+    <td><%= bookquote.title %></td>
+    <td><%= bookquote.author %></td>
+    <td><%= bookquote.quote %></td>
+    <td><%= bookquote.tw_user %></td>
+    <td><%= bookquote.published %></td>
+    <td><%= link_to 'Show', bookquote %></td>
+    <td><%= link_to 'Edit', edit_bookquote_path(bookquote) %></td>
+    <td><%= link_to 'Destroy', bookquote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bookquote', new_bookquote_path %>

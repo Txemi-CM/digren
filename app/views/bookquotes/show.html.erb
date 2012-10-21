@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Asin:</b>
+  <%= @bookquote.asin %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @bookquote.title %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @bookquote.author %>
+</p>
+
+<p>
+  <b>Quote:</b>
+  <%= @bookquote.quote %>
+</p>
+
+<p>
+  <b>Tw user:</b>
+  <%= @bookquote.tw_user %>
+</p>
+
+<p>
+  <b>Published:</b>
+  <%= @bookquote.published %>
+</p>
+
+
+<%= link_to 'Edit', edit_bookquote_path(@bookquote) %> |
+<%= link_to 'Back', bookquotes_path %>
