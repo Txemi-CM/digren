@@ -5,9 +5,6 @@
     <p>Enter your email address and we will send you a free pdf copy of the book.</p>
     <p>If you like it, tell your friends and it write a review on Amazon.com</p>
 
-    <% @reader = Reader.new %>
-
-
     <%= form_for(@reader) do |f| %>
       <% if @reader.errors.any? %>
         <div id="error_explanation">

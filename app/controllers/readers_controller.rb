@@ -47,7 +47,7 @@ class ReadersController < ApplicationController
         format.html { redirect_to thankyou_path, notice: 'Thank you! We will send you a free pdf copy of Digital Renaissance.' }
         # format.json { render json: @reader, status: :created, location: @reader }
       else
-        format.html { render action: "new" }
+        format.html { render action: "request_copy" }
         format.json { render json: @reader.errors, status: :unprocessable_entity }
       end
     end
@@ -78,6 +78,17 @@ class ReadersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to readers_url }
       format.json { head :no_content }
+    end
+  end
+  
+  # GET /readers/request_copy
+  # GET /readers/request_copy.json
+  def request_copy
+    @reader = Reader.new
+
+    respond_to do |format|
+      format.html # request_copy.html.erb
+      format.json { render json: @reader }
     end
   end
 
