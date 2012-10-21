@@ -1,4 +1,8 @@
 Digren::Application.routes.draw do
+  resources :bookquotes
+
+  resources :readers
+
   root to: 'static_pages#home'
 
   match '/books', to: 'static_pages#books'

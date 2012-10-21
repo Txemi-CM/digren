@@ -1,17 +1,76 @@
-<div class="center hero-unit">
-	<h1>Digital Renaissance</h1>
+<div id="myCarousel" class="carousel slide">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item">
+    	<%= image_tag("digital_renaissance_earth.jpg", :alt => "Digital Renaissance") %>
+    	<div class="carousel-caption">
+                      <h4>A story about a dreamer that wants to change the world.</h4>
+                      <p>Joining a startup accelerator, he will find an algorithm that can change the music creation forever. But soon he will find he is working for the dark side. </p>
+        </div>
+    </div>
+    <div class="item">
+    	<%= image_tag("long_tail_q1.jpg", :alt => "The Long Tail") %>
+    </div>
+    <div class="item">
+    	<%= image_tag("abundance_q1.jpg", :alt => "Abundance") %>
+    </div>
+    <div class="item">
+    	<%= image_tag("wikinomics_q1.jpg", :alt => "Wikinomics") %>
+    </div>    
+    <div class="item">
+    	<%= image_tag("linchpin_q1.jpg", :alt => "Linchpin") %>
+    </div>
+    <div class="item">
+    	<%= image_tag("screw_business_q1.jpg", :alt => "Screw Business as Usual") %>
+    </div>
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+
+<div class="hero-unit">
+	<div id="digren">
+		<h1>Digital Renaissance</h1>
+	</div>
 	<h2>A new era for Dreamers</h2>
-	<p>We are entering a new era. It promises prosperity and richness of ideas as never before.</p>
-	<p>Never before mankind had the means to supply food, clothes and shelter for all. Never before were humans freed from physical labor as now. It is the Abundance economy enabled by Technology.</p>
-	<p>Never was as easy to create and spread ideas. Beyond the knowledge worker, make room for the creative worker and for the artistic worker.</p>
-	<p>The open source movement wins. It is not just the do-the-right-thing movement. Share and the more people use your idea, the most valuable it gets, both for you and for the world.</p>
-	<p>Capitalism with money at the only center and measure of value is doomed. It is profoundly unfair. It is the root cause of the financial crisis and will only get us to social unrest. Welcome to principle-center capitalism.</p>
-	<p>Nothing happens unless first a dream. We need more dreamers, more Quixotes, willing to give everything in their fight.</p>
+	<ul>
+		<li>We are entering a new era. It promises prosperity and richness of ideas as never before.</li>
+		<li>Never before mankind had the means to supply food, clothes and shelter for all. Never before were humans freed from physical labor as now.</li>
+		<li>Never was as easy to create and spread ideas. The open source movement wins. The more you share your idea the more valuable it gets.</li>
+		<li>Beyond the knowledge and creative worker, it's time for the artistic worker.</li>
+		<li>Business and work must have a purpose. Business can not be just about profits anymore.</li>
+		<li>We need more dreamers, willing to bet all on their beliefs.</li>
+	</ul>
+
 	
 	 <%= render 'layouts/quiero' %>
 
-	<small>A new fiction work by JMC will launch on Amazon on 1st December.</small><br>
-	<small>Get a free pdf copy here.</small>
+	<small>A new fiction book by Jose Miguel Cansado will launch on Amazon on 1st December. Get a free pdf copy here.</small>
 
 	<%= render 'layouts/social' %>
 </div>
+<div class="row-fluid">
+  <div class="span6">
+	<blockquote>
+		<p>In a world of material goods [...] trade is a zero-sum game. I’ve got a hunk of gold and you have a watch. If we trade, then I have a watch and you have a hunk of gold. But if you have an idea and I have an idea, and we exchange them, then we both have two ideas. It’s nonzero.
+		</p> 
+		<small>Dean Kamen, Inventor</small>
+	</blockquote>
+  </div>
+  <div class="span6">
+	<blockquote>
+		<p>Nothing happens unless first a dream.</p> 
+		<small>Carl Sandburg, Poet</small>
+	</blockquote>
+
+  </div>
+</div>
+
+<script>
+    $('.carousel').carousel({
+        interval: 1500
+    })​;
+</script>
+
+
