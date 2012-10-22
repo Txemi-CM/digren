@@ -44,6 +44,7 @@ class ReadersController < ApplicationController
 
     respond_to do |format|
       if @reader.save
+        ReaderMailer.download_email(@reader).deliver
         format.html { redirect_to thankyou_path, notice: 'Thank you! We will send you a free pdf copy of Digital Renaissance.' }
         # format.json { render json: @reader, status: :created, location: @reader }
       else
