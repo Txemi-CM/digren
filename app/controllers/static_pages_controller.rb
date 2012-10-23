@@ -16,4 +16,8 @@ class StaticPagesController < ApplicationController
 
   def thankyou
   end
+
+  def download
+  end
+  
 end

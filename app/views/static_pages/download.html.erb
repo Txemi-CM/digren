@@ -1,0 +1,20 @@
+<div id="digren">
+	<h1>Digital Renaissance</h1>
+</div>
+<h2>Jose Miguel Cansado</h2>
+<div class="row">
+	<div class="offset3 span6 center">
+	<%= image_tag("digital_renaissance_cover_30.jpg", :alt => "Digital Renaissance") %>
+	<br><br>
+	<% p = params[:code] %>
+
+	<% if p == "70120924" %>
+		<p><a href="http://operamania.com/d70120924/digital-renaissance-jmc.pdf"  class="btn btn-primary btn-large">Download</a></p>
+		<h3>Enjoy reading!</h3>
+	<% else %>
+		<p>You can request a free pdf copy of <em>Digital Renaissance here</em>:</p>
+		<%= render 'layouts/quiero' %>
+	<% end %>
+	
+  	</div>
+</div>

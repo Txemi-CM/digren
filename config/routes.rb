@@ -13,6 +13,7 @@ Digren::Application.routes.draw do
 
   match '/request_copy', to: 'readers#request_copy'
   match '/thankyou', to: 'static_pages#thankyou'
+  match '/download', to: 'static_pages#download'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
