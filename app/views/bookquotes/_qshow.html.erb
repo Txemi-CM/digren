@@ -1,0 +1,15 @@
+
+
+<div class="row">
+  <div class="offset2 span2">
+    <%= image_tag("#{q.asin}.jpg", :alt => "Digital Renaissance", :href => "http://www.amazon.com/dp/#{q.asin}?tag=ttbiz-20") %>
+  </div>
+  <div class="span6">
+    <blockquote><p><%= q.quote %></p><small><%= q.author %>, <a href="http://www.amazon.com/dp/#{q.asin}?tag=ttbiz-20"><%= q.title %></a></small></blockquote>
+    <% if q.tw_user %>
+      <p>Posted by <%= q.tw_user %></p>
+    <% end %>
+  </div>
+</div>
+
+

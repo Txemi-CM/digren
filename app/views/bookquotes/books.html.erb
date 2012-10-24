@@ -1,2 +1,40 @@
-<h1>StaticPages#books</h1>
-<p>Find me in app/views/static_pages/books.html.erb</p>
+<h2>Insightful quotes from great authors</h2>
+
+<% @bookquotes.each do |q| %>
+	<% if q.published == "y" %>
+		<div class="row">
+		  <div class="offset2 span2">
+		    <%= link_to image_tag("#{q.asin}.jpeg"), "http://www.amazon.com/dp/#{q.asin}?tag=ttbiz-20" %>
+		    <br><br>
+		  </div>
+		  <div class="span6">
+		    <blockquote><p><%= q.quote %></p><small><%= q.author %>, 
+		    	<%= link_to q.title, "http://www.amazon.com/dp/#{q.asin}?tag=ttbiz-20" %>
+		    </small></blockquote>
+		    <% if !q.tw_user.blank? %>
+		      <p>Posted by <%= q.tw_user %></p>
+		    <% end %>
+		  </div>
+		</div>
+
+	<% end %>	
+<% end %>
+
+
+<hr>
+<div class="row">
+	<div class="span6 offset3">
+
+		<h3>Contribute to the ideas that are shaping the future.</h3>
+
+		<p>What ideas guide your world?<br>
+		What quote had the greatest impact on you lately?<br>
+		Share insightful quotes from authors that inspire you.<br>		 
+		</p>
+		<p><%= link_to "Submit a quote &raquo;".html_safe, submit_quote_path, class: "btn btn-large btn-primary" %></p>	
+
+	</div>
+</div>
+
+
+

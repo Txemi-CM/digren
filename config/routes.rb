@@ -7,6 +7,7 @@ Digren::Application.routes.draw do
   
   match '/request_copy', to: 'readers#request_copy'
   match '/books', to: 'bookquotes#books'
+  match '/submit_quote', to: 'bookquotes#submit_quote'
 
   match '/thebook', to: 'static_pages#thebook'
   match '/blog', to: 'static_pages#blog'

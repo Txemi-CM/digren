@@ -1,0 +1,60 @@
+<div id="digren">
+	<h1>Digital Renaissance</h1>
+</div>
+<h2>Contribute to the ideas that are shaping the future.</h2>
+
+
+<div class="row">
+	<div class="span6 offset3">
+
+		<p>What ideas guide your world?<br>
+		What quote had the greatest impact on you lately?<br>
+		Share insightful quotes from authors that inspire you.<br>		 
+		</p>	
+		<%= form_for(@bookquote) do |f| %>
+		  <% if @bookquote.errors.any? %>
+		    <div id="error_explanation">
+		      <h2><%= pluralize(@bookquote.errors.count, "error") %> prohibited this bookquote from being saved:</h2>
+
+		      <ul>
+		      <% @bookquote.errors.full_messages.each do |msg| %>
+		        <li><%= msg %></li>
+		      <% end %>
+		      </ul>
+		    </div>
+		  <% end %>
+
+		  
+		  <div class="field">
+		    <%= f.label "Book Title" %><br />
+		    <%= f.text_field :title, :class => "span6" %>
+		  </div>
+		  <div class="field">
+		    <%= f.label :author %><br />
+		    <%= f.text_field :author, :class => "span5" %>
+		  </div>
+		  <div class="field">
+		    <%= f.label :quote %><br />
+		    <%= f.text_area :quote, :rows => 5, :class => "span6" %>
+		  </div>
+		  <div class="field">
+		    <%= f.label "Amazon ASIN (optional)" %><br />
+		    <%= f.text_field :asin %>
+		  </div>
+		  <div class="field">
+		    <%= f.label "Your Twitter User (optional)" %><br />
+		    <div class="input-prepend">
+		    	<span class="add-on">@</span>
+		    	<%= f.text_field :tw_user, :class =>"span2" %>
+			</div>
+		  </div>
+		  
+		  <div class="actions">
+		    <%= f.submit "Propose a quote" %>
+		  </div>
+		<% end %>
+	</div>
+</div>
+
+
+
