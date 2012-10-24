@@ -44,10 +44,10 @@ class BookquotesController < ApplicationController
 
     respond_to do |format|
       if @bookquote.save
-        format.html { redirect_to @bookquote, notice: 'Bookquote was successfully created.' }
+        format.html { redirect_to thanks4quote_path, notice: 'Bookquote was successfully created.' }
         format.json { render json: @bookquote, status: :created, location: @bookquote }
       else
-        format.html { render action: "new" }
+        format.html { render action: "books" }
         format.json { render json: @bookquote.errors, status: :unprocessable_entity }
       end
     end
@@ -80,4 +80,16 @@ class BookquotesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  # GET /bookquotes/books
+  # GET /bookquotes/books.json
+  def books
+    @bookquote = Bookquote.new
+
+    respond_to do |format|
+      format.html # books.html.erb
+      format.json { render json: @bookquote }
+    end
+  end
+
 end

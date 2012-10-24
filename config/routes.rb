@@ -4,16 +4,19 @@ Digren::Application.routes.draw do
   resources :readers
 
   root to: 'static_pages#home'
-
-  match '/books', to: 'static_pages#books'
+  
+  match '/request_copy', to: 'readers#request_copy'
+  match '/books', to: 'bookquotes#books'
 
   match '/thebook', to: 'static_pages#thebook'
-
   match '/blog', to: 'static_pages#blog'
-
-  match '/request_copy', to: 'readers#request_copy'
   match '/thankyou', to: 'static_pages#thankyou'
+  match '/thanks4quote', to: 'static_pages#thanks4quote'
   match '/download', to: 'static_pages#download'
+  match '/about', to: 'static_pages#about'
+  match '/contact' => 'contact#new', :as => 'contact', :via => :get
+  match '/contact' => 'contact#create', :as => 'contact', :via => :post
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
