@@ -3,7 +3,7 @@ class ReaderMailer < ActionMailer::Base
 
   def download_email(reader)
   	@reader = reader
-  	mail(:to => reader.email, :subject => "You can download your ebook here")
+  	mail(:to => reader.email, :subject => "Digital Renaissance - Download your ebook for free now")
   end
 
 end
