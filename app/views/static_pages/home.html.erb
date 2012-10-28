@@ -11,35 +11,35 @@
     <div class="item">
     	<%= image_tag("long_tail_q1.jpg", :alt => "The Long Tail") %>
       <div class="carousel-caption">
-         <p>We are entering a new era. It promises prosperity and richness of ideas as never before.
+         <p>1. We are entering a new era. It promises prosperity and richness of ideas as never before.
          </p>
       </div>
     </div>
     <div class="item">
     	<%= image_tag("abundance_q1.jpg", :alt => "Abundance") %>
       <div class="carousel-caption">
-         <p>Never before mankind had the means to supply food, clothes and shelter for all. Never before were humans freed from physical labor as now.
+         <p>2. Never before mankind had the means to supply food, clothes and shelter for all. Never before were humans freed from physical labor as now.
          </p>
       </div>      
     </div>
     <div class="item">
     	<%= image_tag("wikinomics_q1.jpg", :alt => "Wikinomics") %>
       <div class="carousel-caption">
-         <p>Never was as easy to create and spread ideas. The open source movement wins. The more you share your idea the more valuable it gets.
+         <p>3. Never was as easy to create and spread ideas. The open source movement wins. The more you share your idea the more valuable it gets.
          </p>
       </div>
     </div>    
     <div class="item">
     	<%= image_tag("linchpin_q1.jpg", :alt => "Linchpin") %>
       <div class="carousel-caption">
-         <p>Beyond the knowledge and creative worker, it's time for the artistic worker.
+         <p>4. Beyond the <em>knowledge worker</em>, it's time for the <em>artistic worker</em>.
          </p>
       </div>
     </div>
     <div class="item">
     	<%= image_tag("screw_business_q1.jpg", :alt => "Screw Business as Usual") %>
       <div class="carousel-caption">
-         <p>Business and work must have a purpose. Business can not be just about profits anymore.
+         <p>5. Business and work must have a purpose. Business can not be just about profits anymore.
          </p>
       </div>
     </div>
@@ -53,19 +53,24 @@
 	<div id="digren">
 		<h1>Digital Renaissance</h1>
 	</div>
-	<h2>Manifest</h2>
-	<ul>
+	<h2>The era of dreamers</h2>
+	<ol>
 		<li>We are entering a new era. It promises prosperity and richness of ideas as never before.</li>
 		<li>Never before mankind had the means to supply food, clothes and shelter for all. Never before were humans freed from physical labor as now.</li>
 		<li>Never was as easy to create and spread ideas. The open source movement wins. The more you share your idea the more valuable it gets.</li>
-		<li>Beyond the knowledge and creative worker, it's time for the artistic worker.</li>
+		<li>Beyond the <em>knowledge worker</em>, it's time for the <em>artistic worker</em>.</li>
 		<li>Business and work must have a purpose. Business can not be just about profits anymore.</li>
 		<li>We need more dreamers, willing to bet all on their beliefs.</li>
-	</ul>
-
-	<small>A new fiction book by Jose Miguel Cansado will soon launch on Amazon. For a limited time, get a free pdf copy here.</small>
-  <br><br>
-  <%= render 'layouts/quiero' %>
+	</ol>
+  <div class="center row"
+  	<br>
+    <h2>Do you agree with this manifesto?</h2>
+    
+    <p>
+    <%= link_to "Yes &raquo;".html_safe, thebook_path+"?al=y", class: "btn btn-large btn-primary" %>
+    <%= link_to "No &raquo;".html_safe, books_path+"?al=n", class: "btn btn-large btn-inverse offset1" %>
+    </p>
+  </div>
   <hr>
 	<%= render 'layouts/social' %>
 </div>
