@@ -4,78 +4,78 @@
     <div class="active item">
     	<%= link_to image_tag("digital_renaissance_earth.jpg", :alt => "Digital Renaissance"), thebook_path %>
     	<div class="carousel-caption">
-                      <h4>A story about a dreamer that wants to change the world.</h4>
-                      <p>After joining a startup accelerator, he will come across an algorithm that can change music creation forever. But soon he will find he is working for the dark side. </p>
+                      <h4>A non-profit project</h4>
+                      <p>All author earnings from this book will be donated to Unicef.</p>
       </div>
     </div>
     <div class="item">
-    	<%= image_tag("long_tail_q1.jpg", :alt => "The Long Tail") %>
-      <div class="carousel-caption">
-         <p>1. We are entering a new era. It promises prosperity and richness of ideas as never before.
-         </p>
-      </div>
+          <%= image_tag("Shanghai-KL-Lankayan.jpg", :alt => "Collage") %>
+            
     </div>
     <div class="item">
-    	<%= image_tag("abundance_q1.jpg", :alt => "Abundance") %>
-      <div class="carousel-caption">
-         <p>2. Never before mankind had the means to supply food, clothes and shelter for all. Never before were humans freed from physical labor as now.
-         </p>
-      </div>      
+          <%= image_tag("Shanghai.jpg", :alt => "Shanghai") %>
+         
     </div>
     <div class="item">
-    	<%= image_tag("wikinomics_q1.jpg", :alt => "Wikinomics") %>
-      <div class="carousel-caption">
-         <p>3. Never was as easy to create and spread ideas. The open source movement wins. The more you share your idea the more valuable it gets.
-         </p>
-      </div>
+          <%= image_tag("KL.jpg", :alt => "Kuala Lumpur") %>
+        <div class="carousel-caption">
+             <p>Kuala Lumpur, Malaysia
+             </p>
+        </div>     
     </div>    
-    <div class="item">
-    	<%= image_tag("linchpin_q1.jpg", :alt => "Linchpin") %>
-      <div class="carousel-caption">
-         <p>4. Beyond the <em>knowledge worker</em>, it's time for the <em>artistic worker</em>.
-         </p>
-      </div>
-    </div>
-    <div class="item">
-    	<%= image_tag("screw_business_q1.jpg", :alt => "Screw Business as Usual") %>
-      <div class="carousel-caption">
-         <p>5. Business and work must have a purpose. Business can not be just about profits anymore.
-         </p>
-      </div>
-    </div>
   </div>
   <!-- Carousel nav -->
   <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
   <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
 
-<div class="hero-unit">
-	<div id="digren">
-		<h1>Digital Renaissance</h1>
-	</div>
-	<h2>The era of dreamers</h2>
-	<ol>
-		<li>We are entering a new era. It promises prosperity and richness of ideas as never before.</li>
-		<li>Never before mankind had the means to supply food, clothes and shelter for all. Never before were humans freed from physical labor as now.</li>
-		<li>Never was as easy to create and spread ideas. The open source movement wins. The more you share your idea the more valuable it gets.</li>
-		<li>Beyond the <em>knowledge worker</em>, it's time for the <em>artistic worker</em>.</li>
-		<li>Business and work must have a purpose. Business can not be just about profits anymore.</li>
-		<li>We need more dreamers, entrepreneurs willing to bet all on their beliefs.</li>
-	</ol>
-  <!-- question
-  <div class="center row"
-  	<br>
-    <h2>Do you agree with this manifesto?</h2>
-    
-    <p>
-    <%= link_to "Yes &raquo;".html_safe, thebook_path+"?al=y", class: "btn btn-large btn-primary" %>
-    <%= link_to "No &raquo;".html_safe, books_path+"?al=n", class: "btn btn-large btn-inverse offset1" %>
-    </p>
+<h2>Praise from readers:</h2>
+<div id="praise">
+<div class="row-fluid">
+  <div class="span6">
+  <blockquote>
+    <p>Thriller, technology, love, business. The story traps you and just can't stop reading until the end. 
+    </p> 
+  </blockquote>
   </div>
-  -->
-  <hr>
-	<%= render 'layouts/social' %>
+  <div class="span6">
+  <blockquote>
+    <p>An attractive fantasy with the glamorous life in Asia Pacific around Shanghai and Kuala Lumpur.</p>
+  </blockquote>
+  </div>
 </div>
+<div class="row-fluid">
+  <div class="span6">
+  <blockquote>
+    <p>A fresh new plot [...] managed to scratched in technology, culture, romance and a little dash of thriller.
+    </p> 
+  </blockquote>
+  </div>
+  <div class="span6">
+  <blockquote>
+    <p>This book was an enjoyable read, taking me back to some of the places I have lived and visited as well.</p>
+  </blockquote>
+  </div>
+</div>
+<div class="row-fluid">
+  <div class="span6">
+  <blockquote>
+    <p>The story was fast paced, and linked to technology and business, and at the same time weaving some suspense and romance.
+    </p> 
+  </blockquote>
+  </div>
+  <div class="span6">
+  <blockquote>
+    <p>All in all a good read, entertaining and with some "food-for-thought."
+    </p>
+  </blockquote>
+  </div>
+</div>
+
+</div>
+
+<br>
+
 <div class="row-fluid">
   <div class="offset1 span3">
     <%= image_tag("digital_renaissance_cover_30.jpg", :alt => "Digital Renaissance") %>
@@ -83,12 +83,17 @@
   <div class="span8">
     <h4>A story about a dreamer that wants to change the world.</h4>
     <p>After joining a startup accelerator, Mike Marquez will come across an algorithm that can change music creation forever. But soon he will find he is working for the dark side. </p>
-    <p>A new fiction book by Jose Miguel Cansado is now selling on Amazon.</p>
-    <p>For a limited time, you can get a free pdf copy here.</p>
-    <p><%= link_to "Get a free copy &raquo;".html_safe, request_copy_path, class: "btn" %></p>
+    <p>A story about pursuing your dreams, being true to yourself, and standing for your own beliefs.</p>
+    
     <p><%= link_to "Buy on Amazon &raquo;".html_safe, "http://www.amazon.com/dp/B009YJOB6M?tag=ttbiz-20", class: "btn btn-success" %></p>
+    <p><em><small>All royalties from this book go to Unicef</small></em></p>
+    <%= render 'layouts/social' %>
   </div>    
 </div>
+
+  
+
+<!-- quotes  
 <hr>
 <div class="row-fluid">
   <div class="span6">
@@ -106,6 +111,8 @@
 
   </div>
 </div>
+
+-->
 
 <script>
     $('.carousel').carousel({

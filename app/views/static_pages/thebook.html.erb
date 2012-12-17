@@ -12,12 +12,45 @@
   </div>
   <div class="span8">
     <h4>A story about a dreamer that wants to change the world.</h4>
-    <p>After joining a startup accelerator, Mike Marquez comes across an algorithm that can change music creation forever. But soon he will find he is working for the dark side. </p>
-    <p>The fist fiction work of Jose Miguel Cansado is now <a href="http://www.amazon.com/dp/B009YJOB6M?tag=ttbiz-20" >selling on Amazon.</a></p>
-    <p>For a limited time, you can get a free pdf copy here.</p>
-    <p><%= link_to "Get a free copy &raquo;".html_safe, request_copy_path, class: "btn" %></p>
+    <p>After joining a startup accelerator, Mike Marquez comes across an algorithm that can change music creation forever. But soon he will find he is working for the dark side. Even more, when a colleague dies in strange circumstances.</p>
+    <p>A story about pursuing your dreams, being true to yourself, and standing for your own beliefs.</p>
+    
+
     <p><%= link_to "Buy on Amazon &raquo;".html_safe, "http://www.amazon.com/dp/B009YJOB6M?tag=ttbiz-20", class: "btn btn-success" %></p>
+    <p><em><small>All royalties from this book go to Unicef</small></em></p>
   </div>    
+</div>
+<div id="myCarousel" class="carousel slide">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+
+    <div class="active item">
+      <%= image_tag("Shanghai-KL-Lankayan.jpg", :alt => "Collage") %>
+        
+    </div>
+    <div class="item">
+      <%= image_tag("Shanghai.jpg", :alt => "Shanghai") %>
+     
+    </div>
+    <div class="item">
+      <%= image_tag("KL.jpg", :alt => "Kuala Lumpur") %>
+      <div class="carousel-caption">
+         <p>Kuala Lumpur, Malaysia
+         </p>
+      </div>     
+    </div>
+    <div class="item">
+      <%= image_tag("digital_renaissance_earth.jpg", :alt => "Earth-rise") %>
+      <div class="carousel-caption center">
+         <p>Shanghai, KL and Lankayan &mdash; Some of the places where action happens. 
+         </p>
+      </div>      
+    </div>
+    
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
 
 <div class="hero-unit">
@@ -33,31 +66,8 @@
 	<%= render 'layouts/quiero' %>
 	<hr>
 	<%= render 'layouts/social' %>
-</div>
-<div id="myCarousel" class="carousel slide">
-  <!-- Carousel items -->
-  <div class="carousel-inner">
-
-    <div class="item">
-    	<%= image_tag("Shanghai.jpg", :alt => "Shanghai") %>
-
-    </div>
-    <div class="item">
-      <%= image_tag("KL.jpg", :alt => "Kuala Lumpur") %>
     
-    </div>
-    <div class="active item">
-    	<%= image_tag("Shanghai-KL-Lankayan.jpg", :alt => "Collage") %>
-      <div class="carousel-caption">
-         <p>Some of the places in Asia where action happens: Shanghai, KL and Lankayan.
-         </p>
-      </div>      
-    </div>
-    
-  </div>
-  <!-- Carousel nav -->
-  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    <p><%= link_to "Get a free pdf sample &raquo;".html_safe, request_copy_path, class: "btn" %></p>
 </div>
 
 

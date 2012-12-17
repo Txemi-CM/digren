@@ -81,13 +81,13 @@ class BookquotesController < ApplicationController
     end
   end
   
-  # GET /bookquotes/books
-  # GET /bookquotes/books.json
-  def books
+  # GET /bookquotes/manifesto
+  # GET /bookquotes/manifesto.json
+  def manifesto
     @bookquotes = Bookquote.all
 
     respond_to do |format|
-      format.html # books.html.erb
+      format.html # manifesto.html.erb
       format.json { render json: @bookquotes }
     end
   end
